@@ -64,14 +64,13 @@ class UserViewSet(viewsets.ModelViewSet):
     )
     def get_patch_me(self, request):
         user = get_object_or_404(User, username=self.request.user)
-        if request.method == 'GET':
-            serializer = UserSerializer(user)
-            return Response(serializer.data, status=status.HTTP_200_OK)
         if request.method == 'PATCH':
             serializer = MeSerializer(user, data=request.data, partial=True)
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
+        serializer = UserSerializer(user)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class CategoryViewSet(ListCreateDestroyViewSet):
