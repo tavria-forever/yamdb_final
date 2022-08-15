@@ -86,7 +86,7 @@ docker-compose exec web pythonmanage.py collectstatic --no-input
 
 ## CI
 
-Для удобства разработки и деплоя, настроен CI через github actions. Конфиг лежит в директории [.github/workflows/yamdb_workflow.yml](./github/workflows/yamdb_workflow.yml).
+Для удобства разработки и деплоя, настроен CI через github actions. Конфиг лежит в директории [.github/workflows/yamdb_workflow.yml](./.github/workflows/yamdb_workflow.yml).
 
 При каждом push в ветку master:
 - линтинг файлов с помощью Flake8;
