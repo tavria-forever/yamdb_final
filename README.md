@@ -1,5 +1,6 @@
 # Проект «API для YamDB»
 
+Статус сборки:
 ![yamdb_final workflow status](https://github.com/tavria-forever/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 [YamDB API](http://51.250.100.230/redoc/) - лучший каталог фильмов в интернете.
